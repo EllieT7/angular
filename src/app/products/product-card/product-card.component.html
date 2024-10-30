@@ -1,0 +1,10 @@
+<div *ngIf="mochila" class="card" style="width: 18rem;">
+    <img src="{{mochila.imageUrl}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ mochila.name }}</h5>
+        <p class="card-text">{{mochila.description}}</p>
+            <span>Bs. {{mochila.price}}</span>
+            <br>        
+        <a href="#" class="btn btn-primary" [routerLink]="['/detail', mochila.id]">Ver más</a>
+    </div>
+</div>

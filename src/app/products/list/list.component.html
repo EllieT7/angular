@@ -1,0 +1,13 @@
+<h1>Inicio</h1>
+<hr>
+<button *ngIf="false" class="btn btn-primary">Boton</button>
+<div class="container" id="contenedor">
+    <app-product-card 
+    *ngFor="let producto of listaProductos"
+    [mochila]="producto" >
+    </app-product-card>
+</div>
+<h2>{{pageNumber}}</h2>
+<br>
+<button (click)="prevPage()" *ngIf="pageNumber>1" class="btn btn-primary">Atras</button>
+<button (click)="nextPage()" class="btn btn-primary">Siguiente</button>
